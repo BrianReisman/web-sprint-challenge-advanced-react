@@ -7,10 +7,8 @@ test("form header renders", () => {
   //Arrange
   render(<CheckoutForm/>)
   const formHeader = screen.getByText(/Checkout foRm/i)
-  
   //Act
   //n/a for this test
-
   //Assert
   expect(formHeader).toBeInTheDocument();
 });
