@@ -102,10 +102,6 @@ Display a list of the plants from the server. This should be done in the class c
 
 Nothing needs to be done here. You _will_ have to navigate to the cart page in your app so you can go to the checkout form for the next step.
 
-
-
-
-
 #### Checkout Form
 
 The form is working, but it is currently controlled by local stateful logic. We want to control this form with a custom hook.
