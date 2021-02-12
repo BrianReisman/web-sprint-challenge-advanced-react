@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "../hooks/useForm";
 
 const initialValue = {
@@ -10,10 +10,16 @@ const initialValue = {
   zip: "",
 };
 
-const CheckoutForm = (props) => {
-  const [values, handleChanges, handleSubmit, showSuccessMessage] = useForm(
+const CheckoutForm = () => {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [values, handleChanges] = useForm(
     initialValue
   );
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowSuccessMessage(true);
+  }
 
   return (
     <>

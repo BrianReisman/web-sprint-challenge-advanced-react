@@ -5,18 +5,18 @@ export default class PlantList extends Component {
   state = {
     plants: [],
   }
-  // add state with a property called "plants" - initialize as an empty array
 
   componentDidMount(){
     axios.get('http://localhost:3333/plants')
       .then(res => {
+        console.log(res);
         this.setState({plants: res.data.plantsData})
       })
   }
 
+
   /*********  DON'T CHANGE ANYTHING IN THE RENDER FUNCTION *********/
   render() {
-    console.log(this.state.plants)
     return (
       <main className="plant-list">
         {this.state?.plants?.map((plant) => (
